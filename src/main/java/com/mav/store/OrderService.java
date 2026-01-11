@@ -1,7 +1,6 @@
 package com.mav.store;
 
 public class OrderService {
-
     private PaymentService paymentService;
 
     public OrderService(PaymentService paymentService) {
@@ -10,5 +9,9 @@ public class OrderService {
 
     public void placeOrder() {
         paymentService.processPayment(10);
+    }
+
+    public void setPaymentService(PaymentService paymentService) {
+        this.paymentService = paymentService;
     }
 }
